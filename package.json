@@ -1,23 +1,26 @@
 {
-  "name": "@organization/testing-ui-library-3",
+  "name": "@erik-test/testing-ui-library-3",
   "author": "Erik",
   "private": false,
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "type": "module",
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "exports": "./dist/main.js",
   "module": "./dist/main.js",
   "types": "./dist/main.d.ts",
   "scripts": {
     "build": "tsc -b && vite build",
+    "semantic-release": "semantic-release",
     "lint": "eslint ."
   },
   "dependencies": {
     "@mantine/core": "^7.17.3",
     "@mantine/hooks": "^7.17.3",
-    "glob": "^11.0.1"
+    "glob": "^11.0.1",
+    "semantic-release": "^24.2.3"
   },
   "peerDependencies ": {
     "react-dom": "^19.0.0",
@@ -43,11 +46,8 @@
     "vite-plugin-dts": "^4.5.3",
     "vite-plugin-lib-inject-css": "^2.2.1"
   },
-  "engines": {
-    "node": ">=20.0.0 <22.0.0"
-  },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org"
+    "access": "public"
   },
   "license": "MIT"
 }
