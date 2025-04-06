@@ -1,22 +1,26 @@
 /// <reference types="vite/client" />
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import path,{ resolve } from 'node:path'
+import path, { resolve } from 'node:path'
 import { libInjectCss } from 'vite-plugin-lib-inject-css'
-import  { fileURLToPath } from 'node:url'
+import { fileURLToPath } from 'node:url'
 import { globSync } from 'glob'
 import dts from 'vite-plugin-dts'
 
-
 // https://vite.dev/config/
 export default defineConfig({
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
   plugins: [
-    react(), 
+    react(),
     libInjectCss(),
     dts({
+      exclude: ['**/*.stories.tsx'],
       tsconfigPath: 'tsconfig.app.json',
     }),
-  
   ],
   build: {
     lib: {
