@@ -1,6 +1,6 @@
 {
-  "name": "@erik-test/testing-ui-library-3",
-  "author": "Erik",
+  "name": "@kvell-group/ui",
+  "author": "Kvell",
   "private": false,
   "version": "0.0.0-development",
   "type": "module",
